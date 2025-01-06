@@ -31,3 +31,10 @@ ALTER COLUMN salary SET DEFAULT (500);
 -- @block
 ALTER TABLE workers
 RENAME TO employees;
+
+
+-- @block
+DROP TABLE workers;
+
+-- @block
+DROP TABLE employees;
