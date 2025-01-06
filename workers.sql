@@ -27,3 +27,7 @@ ADD CONSTRAINT "not empty email" CHECK (email != '');
 -- @block
 ALTER TABLE workers
 ALTER COLUMN salary SET DEFAULT (500);
+
+-- @block
+ALTER TABLE workers
+RENAME TO employees;
