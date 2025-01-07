@@ -107,3 +107,21 @@ SELECT * FROM employees
 WHERE full_name != 'Петро'
 ORDER BY id DESC
 LIMIT 3;
+
+
+/*DELETE
+--Видаліть співробітника з id=7.
+//Видаліть всіх Микол.
+--Видаліть всіх співробітників, у кого кількість днів відпусток більше 20*/
+
+-- @block
+DELETE FROM employees
+WHERE id = 7;
+
+-- @block
+DELETE FROM employees
+WHERE full_name = 'Микола';
+
+-- @block
+DELETE FROM employees
+WHERE vacation_days >20;
