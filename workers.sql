@@ -34,7 +34,4 @@ RENAME TO employees;
 
 
 -- @block
-DROP TABLE workers;
-
--- @block
 DROP TABLE employees;
