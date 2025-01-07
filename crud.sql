@@ -67,3 +67,43 @@ UPDATE employees
 SET full_name = 'Євген', salary = salary + 200
 WHERE id = 3;
 
+
+/*SELECT
+--Виведіть співробітника з id = 3.
+//Виведіть співробітників с зарплатнею меньше ніж 800$.
+--Виведіть співробітників з кількістю днів відпустки більше нуля. Відсортуйте по зростанню дні відпустки.
+//Виведіть зарплатню та кількість днів відпустки Евгена.
+--Вивести всіх співробітників з ім'ям Петро.
+//Вивести перших 3 співробітників з ім'ям НЕ Петро. Відсортувати по спаданню по id.
+
+*Вивести всіх співробітників віком 27 років або с зарплатнею 1000$.
+*Вивести всіх співробітників віком від 25 (не включно) до 28 років (включно).
+*Вивести всіх співробітників віком від 23 до 27 років включно або з зарплатнею від 400$ до 1000$ включно.
+*/
+
+-- @block
+SELECT * FROM employees
+WHERE id = 3;
+
+-- @block
+SELECT * FROM employees
+WHERE salary < 800;
+
+-- @block
+SELECT * FROM employees
+WHERE vacation_days > 0
+ORDER BY vacation_days ASC;
+
+-- @block
+SELECT salary, vacation_days FROM employees
+WHERE id = 3;
+
+-- @block
+SELECT * FROM employees
+WHERE full_name = 'Петро';
+
+-- @block
+SELECT * FROM employees
+WHERE full_name != 'Петро'
+ORDER BY id DESC
+LIMIT 3;
