@@ -34,3 +34,36 @@ VALUES
 ('Петро', '1985-05-15', 5000, 7, 'petro@gmail.com'),
 ('Марія', '2002-03-02', 2500, 15, 'mar@gmail.com');
   
+
+    /*UPDATE
+--Встановити Павлу зарплатню 2000$.
+//Співробітнику з id=3 змінити дату народження на 87й рік.
+--Всім у кого зарплатня меньше 400$ зробити її 700$.
+--Співробітникам з id більше 2 і менше 5 включно встановити кількість днів відпустки 5.
+//Перейменуйте Ярослава на Евгена і підніміть йому зарплатню на 200$.*/
+
+-- @block
+UPDATE employees
+SET salary = 2000
+WHERE id = 4;
+
+-- @block
+UPDATE employees
+SET birthday = '1987-03-10'
+WHERE id = 3;
+
+-- @block
+UPDATE employees
+SET salary = 700
+WHERE salary < 400;
+
+-- @block
+UPDATE employees
+SET vacation_days = 5
+WHERE id >= 2 AND id < 5;
+
+-- @block
+UPDATE employees
+SET full_name = 'Євген', salary = salary + 200
+WHERE id = 3;
+
